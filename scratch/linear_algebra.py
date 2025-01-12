@@ -49,18 +49,18 @@ def vector_mean(vectors: List[Vector]) -> Vector:
 assert vector_mean([[1, 2], [3, 4], [5, 6]]) == [3, 4], "Logical Error in vector_mean()"
 
 
-def dot_product(v: Vector, w: Vector) -> float:
+def dot(v: Vector, w: Vector) -> float:
     """Compute the dot product of two vectors."""
     assert len(v) == len(w), "Vectors must be the same size!"
     return sum(v_i * w_i for v_i, w_i in zip(v, w))
 
 
-assert dot_product([1, 2, 3], [4, 5, 6]) == 32, "Logical Error in dot_product()"
+assert dot([1, 2, 3], [4, 5, 6]) == 32, "Logical Error in dot()"
 
 
 def sum_of_squares(v: Vector) -> float:
     """Compute the sum of squares of each component in the vector."""
-    return dot_product(v, v)
+    return dot(v, v)
 
 
 assert sum_of_squares([1, 2, 3]) == 14, "Logical Error in sum_of_squares()"
