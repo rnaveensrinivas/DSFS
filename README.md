@@ -1,97 +1,59 @@
-# Data-Science-From-Scratch
-**Repository Description**:   Notes and Python code from *Data Science From Scratch* by Joel Grus, covering foundational data science concepts and implementations.
+# DSFS - Data Science From Scratch
 
-# Installing Anaconda
+This repository contains resources and code for building **Machine Learning models from first principles**. The goal is to understand the core concepts behind machine learning algorithms, without relying on high-level libraries, while implementing everything from scratch.
 
-Here’s a step-by-step guide to install Anaconda:
+## Directory Structure
 
----
+```
+└── rnaveensrinivas-DSFS/
+    ├── README.md
+    ├── READMEs/
+    │   └── linear_algebra.md
+    |   └── ...
+    |
+    └── scratch/
+        ├── __init__.py
+        ├── linear_algebra.py
+        └── ...
 
-### **Step 1: Update System Packages**
-Open a terminal and update your package lists and installed packages:
-```bash
-sudo apt update && sudo apt upgrade -y
 ```
 
----
+#### `READMEs/`
+This directory contains detailed notes and explanations related to the implementation of ML models.
 
-### **Step 2: Download the Anaconda Installer**
-1. Visit the [official Anaconda download page](https://www.anaconda.com/download/success).
-2. Copy the download link for the Linux installer.
+#### `scratch/`
+The `scratch/` package contains the foundational code for implementing machine learning models from first principles. Each file within this package is dedicated to a specific aspect of machine learning, focusing on building algorithms and methods from the ground up, with no reliance on high-level libraries.
 
-Alternatively, use `wget` to download it directly:
-```bash
-wget https://repo.anaconda.com/archive/Anaconda3-2023.11-Linux-x86_64.sh
-```
+### Table For Quick Navigation
 
----
 
-### **Step 3: Verify the Installer (Optional but Recommended)**
-To ensure the file is downloaded correctly:
-1. Get the SHA256 checksum from the Anaconda website for the installer version.
-2. Run the following command to generate the checksum:
+| **Module Name**  | **Code**                                       | **README**                                    |
+|-------------------------------|------------------------------------------------|----------------------------------|
+| Linear Algebra  | [`linear_algebra.py`](scratch/linear_algebra.py) | [`linear_algebra.md`](READMEs/linear_algebra.md) |
+| Statistics      | [`statistics.py`](scratch/statistics.py)       | N/A                                           |
+
+
+## Goals
+
+The primary objectives of this repository are:
+- To develop a deep understanding of machine learning algorithms from the ground up.
+- To implement algorithms and methods starting from mathematical foundations (linear algebra, statistics, etc.) rather than relying on pre-built models or libraries.
+- To encourage a more transparent and intuitive approach to machine learning by providing clear, well-documented code and explanations.
+
+## How to Use
+
+1. Clone the repository to your local machine:
    ```bash
-   sha256sum Anaconda3-2023.11-Linux-x86_64.sh
+   git clone https://github.com/rnaveensrinivas/rnaveensrinivas-DSFS.git
    ```
-3. Compare the output with the checksum on the website. They should match.
 
----
-
-### **Step 4: Run the Installer**
-1. Start the installation process by running:
+2. Navigate to the `scratch/` directory where the implementation of algorithms resides:
    ```bash
-   bash Anaconda3-2023.11-Linux-x86_64.sh
+   cd rnaveensrinivas-DSFS/scratch/
    ```
-2. Follow the prompts:
-   - Press `Enter` to review the license agreement, then type `yes` to accept it.
-   - Confirm the installation location or press `Enter` for the default (`~/anaconda3`).
 
----
+3. Explore and modify the Python files to experiment with different algorithms or methods. Add new scripts or models to the `scratch/` directory as needed.
 
-### **Step 5: Initialize Anaconda**
-Once installation completes, initialize Anaconda by running:
-```bash
-conda init
-```
-
----
-
-### **Step 6: Activate Changes**
-Close and reopen your terminal or activate the base environment directly:
-```bash
-source ~/.bashrc
-```
-
----
-
-### **Step 7: Test Installation**
-To confirm Anaconda is installed, check the version:
-```bash
-conda --version
-```
-
----
-
-### **Step 8: Update Anaconda (Optional)**
-Update Anaconda to ensure you have the latest packages:
-```bash
-conda update -n base -c defaults conda
-```
-
----
-
-### **Step 9: Clean Up (Optional)**
-You can delete the installer file to save space:
-```bash
-rm Anaconda3-2023.11-Linux-x86_64.sh
-```
-
----
-
-### **Optional: Prevent Auto-Activation**
-If you prefer not to activate the base environment every time a terminal starts, run:
-```bash
-conda config --set auto_activate_base false
-```
+4. Check out the `READMEs/` directory for additional theoretical explanations and visualizations.
 
 ---
